@@ -53,17 +53,17 @@ try:
     choise = input("Yapmak İstediğiniz İşlemi Seçiniz = ")
 
     if (choise == "1"):
-        domain = input("\nHedef Domain Giriniz = ")
+        domain = input("\nHedef Domain Giriniz (turkhackteam.org) = ")
         domain_search(domain)
 
     elif (choise == "2"):
-        domain = input("\nİlgili Domain/Şirket Giriniz (ankara.edu.tr) = ")
-        ad = input("İlgili Kullanıcı Adı Giriniz () = ")
-        soyad = input("İlgili Kullanıcı Soyadı Giriniz = ")
+        domain = input("\nİlgili Domain/Şirket Giriniz (org) = ")
+        ad = input("İlgili Kullanıcı Adı Giriniz (emre) = ")
+        soyad = input("İlgili Kullanıcı Soyadı Giriniz (öztürk) = ")
         email_finder(domain, ad, soyad)
 
     elif (choise == "3"):
-        email = input("\nİlgili Email Adresini Giriniz = ")
+        email = input("\nİlgili Email Adresini Giriniz (root@turkhackteam.org) = ")
         email_verifier(email)
 
     elif (choise == "0"):
