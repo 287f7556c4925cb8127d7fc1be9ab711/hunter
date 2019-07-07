@@ -57,8 +57,8 @@ try:
         domain_search(domain)
 
     elif (choise == "2"):
-        domain = input("\nİlgili Domain/Şirket Giriniz = ")
-        ad = input("İlgili Kullanıcı Adı Giriniz = ")
+        domain = input("\nİlgili Domain/Şirket Giriniz (ankara.edu.tr) = ")
+        ad = input("İlgili Kullanıcı Adı Giriniz () = ")
         soyad = input("İlgili Kullanıcı Soyadı Giriniz = ")
         email_finder(domain, ad, soyad)
 
