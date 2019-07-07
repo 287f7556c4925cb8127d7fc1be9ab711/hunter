@@ -15,15 +15,16 @@ def get_user_input():
 def domain_search(domain):
     result = hunter.domain_search(domain)
     result = result["emails"]
+    values = ["first_name", "last_name", "phone_number", "value"]
+    keys = ["ad", "soyad", "telefon", "email"]
+
     for i in range(len(result)):
-        os.system("echo " + "ad = " + str(result[i]["first_name"]) + " >> deneme.txt")
-        os.system("echo " + "soyad = " + str(result[i]["last_name"]) + " >> deneme.txt")
-        os.system("echo " + "telefon = " + str(result[i]["phone_number"]) + " >> deneme.txt")
-        os.system("echo " + "email = " + str(result[i]["value"]) + " >> deneme.txt")
+        for j in range(len(keys)):
+            os.system("echo " + keys[j] + " = " + str(result[i][values[j]]) + " >> deneme.txt")
         os.system("echo " + "-----------------------------------------" + " >> deneme.txt")
 
 
-#def email_finder():
+# def email_finder():
 
 
 # def email_verifier():
