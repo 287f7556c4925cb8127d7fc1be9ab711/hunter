@@ -10,14 +10,8 @@ def domain_search(domain):
     values = ["first_name", "last_name", "phone_number", "value"]
     keys = ["ad", "soyad", "telefon", "email"]
     for i in range(len(result)):
-        email = hunter.email_verifier(result[i]["value"])
         for j in range(len(keys)):
             os.system("echo " + keys[j] + " = " + str(result[i][values[j]]) + " >> " + domain + ".txt")
-
-        if (email["smtp_check"]):
-            os.system("echo " + keys[3] + " durumu = email aktif durumda" + " >> " + domain + ".txt")
-        else:
-            os.system("echo " + keys[3] + " durumu = email aktif değildir" + " >> " + domain + ".txt")
 
         os.system("echo " + "-----------------------------------------" + " >> " + domain + ".txt")
     print("\nSonuçlar " + domain + ".txt Olarak Kayıt Edildi..")
